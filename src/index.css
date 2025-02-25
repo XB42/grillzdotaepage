@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-full transition duration-200 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply bg-gold-400 text-purple-950 hover:bg-gold-300;
+  }
+}
+
+/* Custom Scrollbar Styling */
+.flex::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.flex::-webkit-scrollbar-track {
+  background: rgba(234, 179, 8, 0.1);
+  border-radius: 100vh;
+}
+
+.flex::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #f9c31f, #eab308);
+  border-radius: 100vh;
+}
+
+.flex::-webkit-scrollbar-thumb:hover {
+  background: #f9c31f;
+}
