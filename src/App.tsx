@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Sparkles, Palette, Crown, Camera, Star, Quote } from 'lucide-react';
+import { Calendar, Sparkles, Palette, Crown, Camera, Star, Quote, Phone, MapPin } from 'lucide-react';
 
 function App() {
   const galleryImages = [
@@ -46,6 +46,8 @@ function App() {
     }
   ];
 
+  const whatsappLink = "https://wa.me/971509052700?text=Hi%2C%20I%20am%20looking%20for%20some%20Grillz";
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-950 to-purple-900">
       {/* Navigation */}
@@ -60,10 +62,15 @@ function App() {
               <a href="#about" className="text-purple-100 hover:text-gold-400 transition">About</a>
               <a href="#process" className="text-purple-100 hover:text-gold-400 transition">Process</a>
               <a href="#gallery" className="text-purple-100 hover:text-gold-400 transition">Gallery</a>
-              <button className="bg-gold-400 text-purple-950 px-6 py-2 rounded-full hover:bg-gold-300 transition flex items-center font-medium">
+              <a 
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gold-400 text-purple-950 px-6 py-2 rounded-full hover:bg-gold-300 transition flex items-center font-medium"
+              >
                 <Calendar className="w-4 h-4 mr-2" />
                 Book a Call
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -83,10 +90,15 @@ function App() {
                 Discover custom, handcrafted grillz designed exclusively for you. We blend cutting-edge design with expert craftsmanship to create statement pieces that reflect your unique style.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-gold-400 text-purple-950 px-8 py-3 rounded-full hover:bg-gold-300 transition flex items-center text-lg font-medium shadow-lg shadow-gold-400/20">
+                <a 
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gold-400 text-purple-950 px-8 py-3 rounded-full hover:bg-gold-300 transition flex items-center text-lg font-medium shadow-lg shadow-gold-400/20"
+                >
                   <Calendar className="w-5 h-5 mr-2" />
                   Book a Free Call
-                </button>
+                </a>
                 <a href="#gallery" className="border-2 border-gold-200 text-gold-200 px-8 py-3 rounded-full hover:bg-gold-400 hover:text-purple-950 hover:border-gold-400 transition text-lg font-medium flex items-center">
                   <Camera className="w-5 h-5 mr-2" />
                   View Gallery
@@ -217,46 +229,98 @@ function App() {
           <p className="text-xl text-purple-100/80 mb-12 max-w-2xl mx-auto">
             Book your free consultation today and join our community of satisfied clients who've elevated their style with custom grillz.
           </p>
-          <button className="bg-gold-400 text-purple-950 px-12 py-4 rounded-full hover:bg-gold-300 transition flex items-center text-lg font-medium mx-auto shadow-xl shadow-gold-400/20 transform hover:scale-105 duration-300">
+          <a 
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gold-400 text-purple-950 px-12 py-4 rounded-full hover:bg-gold-300 transition flex items-center text-lg font-medium mx-auto shadow-xl shadow-gold-400/20 transform hover:scale-105 duration-300 w-fit"
+          >
             <Calendar className="w-6 h-6 mr-3" />
             Schedule Your Free Consultation
-          </button>
+          </a>
         </div>
       </div>
 
       {/* Footer */}
       <footer className="bg-purple-950 border-t border-gold-400/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="space-y-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            {/* Brand Column */}
+            <div className="space-y-6">
               <div className="flex items-center">
                 <Crown className="h-8 w-8 text-gold-400" />
                 <span className="ml-2 text-2xl font-bold text-white">grillz<span className="text-gold-400">.ae</span></span>
               </div>
-              <p className="text-purple-100/60 text-sm">
-                Crafting premium custom grillz that make a statement. Your smile, elevated.
+              <p className="text-purple-100/60">
+                Dubai's premier destination for custom grillz and dental jewelry. Transform your smile with our premium craftsmanship.
               </p>
             </div>
+
+            {/* Quick Links */}
             <div>
-              <h4 className="text-gold-400 font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><a href="#about" className="text-purple-100/60 hover:text-gold-400 transition text-sm">About Us</a></li>
-                <li><a href="#process" className="text-purple-100/60 hover:text-gold-400 transition text-sm">Our Process</a></li>
-                <li><a href="#gallery" className="text-purple-100/60 hover:text-gold-400 transition text-sm">Gallery</a></li>
+              <h4 className="text-gold-400 font-semibold mb-6">Quick Links</h4>
+              <ul className="space-y-4">
+                <li>
+                  <a href="#about" className="text-purple-100/60 hover:text-gold-400 transition">About Us</a>
+                </li>
+                <li>
+                  <a href="#process" className="text-purple-100/60 hover:text-gold-400 transition">Our Process</a>
+                </li>
+                <li>
+                  <a href="#gallery" className="text-purple-100/60 hover:text-gold-400 transition">Gallery</a>
+                </li>
               </ul>
             </div>
+
+            {/* Services */}
             <div>
-              <h4 className="text-gold-400 font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2">
-                <li className="text-purple-100/60 text-sm">Dubai, UAE</li>
-                <li className="text-purple-100/60 text-sm">info@grillz.ae</li>
+              <h4 className="text-gold-400 font-semibold mb-6">Our Services</h4>
+              <ul className="space-y-4">
+                <li className="text-purple-100/60">Custom Gold Grillz</li>
+                <li className="text-purple-100/60">Diamond Grillz</li>
+                <li className="text-purple-100/60">Single Tooth Grillz</li>
+                <li className="text-purple-100/60">Full Set Grillz</li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-gold-400 font-semibold mb-6">Contact Us</h4>
+              <ul className="space-y-4">
+                <li className="flex items-center text-purple-100/60">
+                  <Phone className="h-5 w-5 mr-2 text-gold-400" />
+                  <a href="tel:+971509052700" className="hover:text-gold-400 transition">+971 50 905 2700</a>
+                </li>
+                <li className="flex items-start text-purple-100/60">
+                  <MapPin className="h-5 w-5 mr-2 text-gold-400 mt-1" />
+                  <span>Dubai, United Arab Emirates</span>
+                </li>
+                <li>
+                  <a 
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-gold-400 hover:text-gold-300 transition"
+                  >
+                    <Calendar className="h-5 w-5 mr-2" />
+                    Book Consultation
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gold-400/20 pt-8 text-center">
-            <p className="text-purple-100/60 text-sm">
-              © {new Date().getFullYear()} grillz.ae. All rights reserved.
-            </p>
+
+          {/* Copyright */}
+          <div className="border-t border-gold-400/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-purple-100/60 text-sm mb-4 md:mb-0">
+                © {new Date().getFullYear()} grillz.ae. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <a href="#" className="text-purple-100/60 hover:text-gold-400 transition text-sm">Privacy Policy</a>
+                <a href="#" className="text-purple-100/60 hover:text-gold-400 transition text-sm">Terms of Service</a>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
